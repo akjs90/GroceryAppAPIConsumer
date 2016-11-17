@@ -16,7 +16,7 @@ angular.module("GroceryModule",['ngRoute'])
 	var service={};
 	service.itemList=[];
 
-	$http.get("http://10.212.8.169:9099/api/grocery/")
+	$http.get("http://localhost:9099/api/grocery/")
 	.success(function(data,status){
 		service.itemList=data;
 	})
@@ -39,7 +39,7 @@ return {
 };
 })
 .controller('groceryCtrl',['$scope','groceryService',function($scope,groceryService){
-	$scope.mess="Hello";
+	
 	$scope.list=groceryService.itemList;
 	// $scope.$watch() creates listener
 	$scope.$watch(function(){// value function which walue to listen
