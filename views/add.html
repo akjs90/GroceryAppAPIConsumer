@@ -1,5 +1,9 @@
+<div class="alert alert-success" role="alert" ng-show="flag === 201">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Success!</strong> {{item_name}} added to grocerylist successfully!
+</div>
 <form name="additemform">
-<input type="text"></input>
-<button class="btn btn-success">Save</button>
+<input type="text" ng-model="item_name"></input>
+<button class="btn btn-success" ng-click="add()">Save</button>
 <button class="btn btn-default">Cancel</button>
 </form>
