@@ -1,0 +1,4 @@
+<span><button class="btn btn-success" ng-click="complete(item)">{{item.completed?"mark":"umark"}}</button></span>
+<span>{{item.name|uppercase}}</span>
+<span><a href="#/edit/{{item.id}}" class="btn btn-default">edit</a></span>
+<span><button ng-click="deleteItem(item)" class="btn btn-danger">delete</button></span>

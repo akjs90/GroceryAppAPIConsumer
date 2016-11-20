@@ -1,0 +1,12 @@
+<div class="alert alert-success" role="alert" ng-show="dataObj.status === 201">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Success!</strong> {{dataObj.name|uppercase}} <span ng-show="dataObj.status === 201">added to </span><span ng-show="dataObj.status === 978">removed from </span>grocery list successfully!
+</div>
+<div class="alert alert-success" role="alert" ng-show="dataObj.status === 978">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Success!</strong> {{dataObj.name|uppercase}} removed from grocery list successfully!
+</div>
+<div class="alert alert-danger" role="alert" ng-show="dataObj.status === 500">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Oops!</strong> There was some error, please try again!
+</div>
