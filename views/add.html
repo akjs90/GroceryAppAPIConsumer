@@ -1,9 +1,12 @@
-<div class="alert alert-success" role="alert" ng-show="flag === 201">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Success!</strong> {{item_name}} added to grocerylist successfully!
+{{additemform.$valid}}
+{{additemform.$dirty}}
+{{additemform.$pristine}}
+<div class="alert alert-danger" role="alert" ng-show="!additemform.$valid && additemform.$dirty">
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	  <strong>Error!</strong>Please enter valid input!
 </div>
 <form name="additemform">
-<input type="text" ng-model="item_name"></input>
-<button class="btn btn-success" ng-click="add()">Save</button>
-<button class="btn btn-default">Cancel</button>
+<input type="text" ng-model="item.name" ng-pattern="/^[a-zA-Z]*$/" required></input>
+<button class="btn btn-success" ng-click="additemform.$valid && add()">Save</button>
+<a href="#/" class="btn btn-default">Cancel</a>
 </form>

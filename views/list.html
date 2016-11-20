@@ -1,6 +1,7 @@
-<a href="#/add">Add Item</a>
+<gl-alerts></gl-alerts>
+<a href="#/add" class="btn btn-primary">Add Item</a>
 <ul class="list-group">
-<li  class="list-group-item" ng-repeat="item in list">
+<li  class="list-group-item" ng-repeat="item in list|orderBy:'-date'">
 <gl-content></gl-content>
 </li>
 </ul>
