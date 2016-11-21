@@ -1,4 +1,6 @@
-<span><button class="btn btn-success" ng-click="complete(item)">{{item.completed?"mark":"umark"}}</button></span>
+<button class="btn btn-success pull-left" ng-click="complete(item)" ng-class="item.completed?'glyphicon glyphicon-check':'glyphicon glyphicon-unchecked'"></button>
 <span>{{item.name|uppercase}}</span>
-<span><a href="#/edit/{{item.id}}" class="btn btn-default">edit</a></span>
-<span><button ng-click="deleteItem(item)" class="btn btn-danger">delete</button></span>
+<div class="pull-right">
+<a href="#/edit/{{item.id}}" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></a>
+<button ng-click="deleteItem(item)" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+</div>
